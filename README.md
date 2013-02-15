@@ -10,3 +10,6 @@ To only show one level up working directory.  No @computer name used
 
 ## ZSH Chages
 Add lots of stuff to path for Android SDK and sandbox
+
+## Font
+Included font for cool symbols
