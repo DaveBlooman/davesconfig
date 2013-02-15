@@ -13,3 +13,7 @@ Add lots of stuff to path for Android SDK and sandbox
 
 ## Font
 Included font for cool symbols
+
+# How to edit
+Run vim ~/.zshrc
+
