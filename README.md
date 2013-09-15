@@ -5,15 +5,18 @@ zsh setup
 
 Included files are altered agnoster theme and ZSH config.
 
-## Agnoster changes
-To only show one level up working directory.  No @computer name used
+## You have your own config
+put davey.zsh-theme in /Users/Dave/.oh-my-zsh/themes
 
 ## ZSH Chages
-Add lots of stuff to path for Android SDK and sandbox
+Add lots of stuff to path for Android SDK and sandbox.  Copy all contents from remove.zshrc to .zshrc and save.
 
 ## Font
-Included font for cool symbols
+Included font for cool symbols, install in iterm.
+
+## Iterm2 profile
+it is com.google file, move it to ~/Library/Preferences
 
 # How to edit
-Run vim ~/.zshrc
+Run sublime ~/.zshrc
 

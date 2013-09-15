@@ -1,15 +1,18 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ZSH_THEME="davey"
+DEFAULT_USER="Dave"
+
+# My aliases
+alias zshconfig="sublime ~/.zshrc"
+alias gsass="grunt sass:service:news"
+alias rsss="rake sandbox:restart_services"
+alias publish="rake sandbox:publish"
+alias vsus="vagrant suspend"
+alias vrus="vagrant resume"
+alias rake='noglob rake'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -27,23 +30,24 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git ruby vagrant)
-
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-eval "$(rbfu --init --auto)"
-export PATH=${PATH}:/Users/Dave/Downloads/android-sdk-macosx/tools:/Users/Dave/Downloads/android-sdk-macosx/platform-tools
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-1.9
+export PATH=${PATH}:/Users/Dave/Downloads/android-sdk-macosx/platform-tools
 
 export PATH=${PATH}:/usr/local/bin
 export PATH=${PATH}:/usr/local/sbin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="$PATH":/Users/Dave/depot_tools
+export PATH=${PATH}:/usr/local/opt/ruby/bin
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2 
 export CLICOLOR=1
@@ -53,3 +57,9 @@ export TERM=xterm-256color
 
 autoload -U promptinit
 promptinit
+
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
