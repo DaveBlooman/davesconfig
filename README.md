@@ -17,6 +17,9 @@ Included font for cool symbols, install in iterm.
 ## Iterm2 profile
 it is com.google file, move it to ~/Library/Preferences
 
+# Extras
+brew install zsh-syntax-highlighting
+
 # How to edit
 Run sublime ~/.zshrc
 
